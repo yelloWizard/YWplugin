@@ -1,0 +1,109 @@
+
+#adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap {
+    background-color: #000;
+}
+
+#adminmenu .current div.wp-menu-image:before, #adminmenu .wp-has-current-submenu div.wp-menu-image:before, #adminmenu a.current:hover div.wp-menu-image:before, #adminmenu a.wp-has-current-submenu:hover div.wp-menu-image:before, #adminmenu li.wp-has-current-submenu a:focus div.wp-menu-image:before, #adminmenu li.wp-has-current-submenu.opensub div.wp-menu-image:before, #adminmenu li.wp-has-current-submenu:hover div.wp-menu-image:before {
+    color: #000;
+}
+#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head, #adminmenu li.current a.menu-top, #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
+    background: #ffde10;
+    color: #000;
+}
+#adminmenu .opensub .wp-submenu li.current a, #adminmenu .wp-submenu li.current, #adminmenu .wp-submenu li.current a, #adminmenu .wp-submenu li.current a:focus, #adminmenu .wp-submenu li.current a:hover, #adminmenu a.wp-has-current-submenu:focus+.wp-submenu li.current a {
+    color: #ffde10;
+}
+
+#adminmenu .wp-submenu a:focus, #adminmenu .wp-submenu a:hover, #adminmenu a:hover, #adminmenu li.menu-top>a:focus, #adminmenu li a:focus div.wp-menu-image:before, #adminmenu li.opensub div.wp-menu-image:before, #adminmenu li:hover div.wp-menu-image:before, #adminmenu li.menu-top:hover, #adminmenu li.opensub>a.menu-top, #adminmenu li>a.menu-top:focus {
+    color: #ffde10;
+}
+
+#adminmenu li.menu-top:hover div.wp-menu-image.svg {
+    filter: brightness(0) saturate(100%) invert(85%) sepia(58%) saturate(3831%) hue-rotate(345deg) brightness(107%) contrast(103%);
+}
+
+#wpadminbar {
+    background: #000;
+}
+
+.wp-core-ui .button-primary {
+    background: #ffde10;
+    color: #000;
+    border-color: #ffde10;
+}
+.wp-core-ui .button-primary.focus, .wp-core-ui .button-primary.hover, .wp-core-ui .button-primary:focus, .wp-core-ui .button-primary:hover {
+    background: #000;
+    border-color: #000;
+    color: #ffde10;
+}
+
+#wpwrap {
+    background: #fff;
+}
+
+.welcome-panel-content, div#wpfooter {display: none;}
+.welcome-panel-content.custom {display: block;position: relative;overflow: hidden;}
+
+.welcome-panel-content.custom:before {
+    content: "";
+    background-image: url('https://yellowizard.gr/wp-content/uploads/2021/06/yellowizard-logo-yellow.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: auto;
+    display: block;
+    position: absolute;
+    right: 2%;
+    bottom: 5%;
+    z-index: 1;
+    aspect-ratio: 1 / 1;
+    opacity: 0.2;
+}
+
+
+/* Styling για τον πίνακα */
+.yellowizard-links-table {
+    width: 100%;
+    border-collapse: collapse; /* Καταργεί τις κενές γραμμές ανάμεσα στα κελιά */
+    margin: 20px 0; /* Κενό γύρω από τον πίνακα */
+}
+
+.yellowizard-links-table th, .yellowizard-links-table td {
+    padding: 12px; /* Εσωτερικό περιθώριο στα κελιά */
+    text-align: left; /* Στοίχιση κειμένου αριστερά */
+    border: 1px solid #ddd; /* Ελαφριά γραμμή περιγράμματος */
+}
+
+.yellowizard-links-table th {
+    background-color: #f4f4f4; /* Απαλό χρώμα φόντου για τους τίτλους των στηλών */
+    font-weight: bold; /* Παχύ γραμματοσειρά για τους τίτλους */
+}
+
+/* Ειδικές ρυθμίσεις για κινητές συσκευές */
+@media (max-width: 768px) {
+    .yellowizard-links-table th, .yellowizard-links-table td {
+        padding: 10px; /* Μειώνουμε το padding για μικρές οθόνες */
+    }
+
+    .yellowizard-links-table td {
+        display: block; /* Κάνει τις στήλες να γίνονται block για να στοίχονται κάτω από την άλλη */
+        width: 100%; /* Ολόκληρο το πλάτος για κάθε κελί */
+    }
+
+    .yellowizard-links-table th {
+        display: none; /* Κρύβουμε τους τίτλους για να εξοικονομήσουμε χώρο */
+    }
+
+    .yellowizard-links-table td::before {
+        content: attr(data-label); /* Προσθήκη περιγραφής (label) πριν από κάθε κελί */
+        font-weight: bold; /* Παχύ για την περιγραφή */
+        display: block;
+        margin-bottom: 5px; /* Κενό πριν από την πραγματική τιμή */
+    }
+}
+
+/* Ανάδειξη διαφορετικών χρωμάτων για κάθε γραμμή */
+.yellowizard-links-table tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
